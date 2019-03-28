@@ -1,15 +1,14 @@
-//MEL script for switching between XformConstraint modes
-
 $CurrentXc = `xformConstraint -query -type`;
 
-if( $CurrentXc == "none")
+if( $CurrentXc == "none") {
 	xformConstraint -type "edge";
-	print "current state is EDGE";
-		
-if( $CurrentXc == "edge")
+	print "current state is EDGE\n";
+}	
+if( $CurrentXc == "edge") {
 	xformConstraint -type "surface";
-    print "current state is SURFACE";
-    
-if( $CurrentXc == "surface")
+    print "current state is SURFACE\n";
+}
+if( $CurrentXc == "surface") {
 	xformConstraint -type "none";
-	print "current state is NONE";
+	print "current state is NONE\n";
+}
