@@ -1,0 +1,11 @@
+//MEL script for toggling X-ray view on and off
+
+$XrayState = `modelEditor -q -xray modelPanel4`;
+
+if( $XrayState == 1)
+    modelEditor -e -xray false modelPanel4;
+    print("X-Ray is disabled");
+    
+if( $XrayState == 0)
+    modelEditor -e -xray true modelPanel4;
+    print("X-Ray is enabled");
